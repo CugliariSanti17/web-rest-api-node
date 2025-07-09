@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Productos</title>
+    <link rel="stylesheet" href="../css/stylesPublicar.css">
+</head>
+<body>
+    <h1>Agregar producto</h1>
+    <form class="productsForm" id="formPublicar">
+       <label for="nombreProducto">Nombre:</label> 
+       <input type="text" name="Nombre" id="nombreProducto">
+       <label for="precioProducto">Precio:</label>
+       <input type="number" name="Precio" id="precioProducto">
+       <label for="descripcionProducto">Descripcion:</label>
+       <textarea name="Descripcion" id="descripcionProducto"></textarea>
+       <button type="submit">Crear producto</button>
+    </form>
+
+    <p id="mensajeCrearProducto"></p>
+
+    <script src="../js/agregar.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@ const form = document.getElementById('formEditar');
 const nombre = document.getElementById('nombre');
 const precio = document.getElementById('precio');
 const descripcion = document.getElementById('descripcion')
+const stock = document.getElementById('stock')
 const mensaje = document.getElementById('mensaje')
 
 fetch(`${API_URL}/${id}`)
@@ -14,10 +15,11 @@ fetch(`${API_URL}/${id}`)
         nombre.value = data.nombre;
         precio.value = data.precio;
         descripcion.value = data.descripcion;
+        stock.value = data.stock;
     })
     .catch(error => {
         mensaje.textContent = 'Error al cargar el producto';
-        console.error(error)
+        console.error(error);
     });
 
 form.addEventListener('submit', async (e) => {
@@ -26,7 +28,8 @@ form.addEventListener('submit', async (e) => {
     const productoActualizado = {
         nombre: nombre.value,
         precio: precio.value,
-        descripcion: descripcion.value
+        descripcion: descripcion.value,
+        stock: stock.value
     };
 
     try {

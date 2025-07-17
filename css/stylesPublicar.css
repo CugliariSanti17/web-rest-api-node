@@ -39,6 +39,28 @@ body {
   border-color: #007bff;
 }
 
+.productsForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.productsForm select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.productsForm select option {
+  padding: 8px;
+}
+
 .productsForm button {
   width: 100%;
   padding: 12px;
@@ -60,3 +82,5 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
+

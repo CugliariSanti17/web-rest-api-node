@@ -54,6 +54,37 @@ textarea:focus {
   border-color: #007bff;
 }
 
+.categorias-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.categoria-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoria-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.categoria-group select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.categoria-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
 button {
   width: 100%;
   padding: 0.8rem;
@@ -64,6 +95,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
 }
 
 button:hover {

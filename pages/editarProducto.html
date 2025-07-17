@@ -12,30 +12,54 @@
     <h1>Editar Producto</h1>
     <form id="formEditar">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre"/>
+        <input type="text" id="nombre" />
         <label for="precio">Precio:</label>
-        <input type="number" id="precio"/>
+        <input type="number" id="precio" />
         <label for="descripcion">Descripción:
         <textarea id="descripcion"></textarea>
         <label for="stock">Stock:</label>
         <input type="number" id="stock" />
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" multiple>
-            <option value="ropa">Ropa</option>
-            <option value="basicos">Básicos</option>
-            <option value="tecnologia">Tecnología</option>
-            <option value="accesorios">Accesorios</option>
-            <option value="gaming">Gaming</option>
-            <option value="urbanas">Urbanas</option>
-            <option value="iluminacion">Iluminación</option>
-            <option value="escritorio">Escritorio</option>
-            <option value="wearables">Wearables</option>
-            <option value="deporte">Deporte</option>
-            <option value="audio">Audio</option>
-            <option value="portatiles">Portátiles</option>
-            <option value="hogar">Hogar</option>
-            <option value="outdoor">Outdoor</option>
-        </select>
+        <div class="categoria-container">
+            <div class="categoria-group">
+                <label for="categoria1">1er Categoría:</label>
+                <select id="categoria1">
+                    <option value="ropa">Ropa</option>
+                    <option value="basicos">Básicos</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="urbanas">Urbanas</option>
+                    <option value="iluminacion">Iluminación</option>
+                    <option value="escritorio">Escritorio</option>
+                    <option value="wearables">Wearables</option>
+                    <option value="deporte">Deporte</option>
+                    <option value="audio">Audio</option>
+                    <option value="portatiles">Portátiles</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+            </div>
+
+            <div class="categoria-group">
+                <label for="categoria2">2da Categoría:</label>
+                <select id="categoria2">
+                    <option value="ropa">Ropa</option>
+                    <option value="basicos">Básicos</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="urbanas">Urbanas</option>
+                    <option value="iluminacion">Iluminación</option>
+                    <option value="escritorio">Escritorio</option>
+                    <option value="wearables">Wearables</option>
+                    <option value="deporte">Deporte</option>
+                    <option value="audio">Audio</option>
+                    <option value="portatiles">Portátiles</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+            </div>
+        </div>
         <button type="submit">Guardar Cambios</button>
     </form>
 

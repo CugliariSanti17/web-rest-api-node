@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/stylesIndex.css">
 </head>
+
 <body>
     <h1>Lista de productos:</h1>
-    <div class="busqueda-agregar">
+    <div class="busqueda-agregar-categoria">
         <div class="formPublicarContainer">
             <form action="">
                 <input type="text" placeholder="Buscar productos..." id="buscador">
@@ -19,11 +21,32 @@
         <div class="publicarContainer">
             <a href="./pages/publicarProductos.html" class="agregar-btn">Agregar producto</a>
         </div>
+
+        <div class="categoriaContainer">
+            <select id="filtroCategoria">
+                <option value="">Todas</option>
+                <option value="ropa">Ropa</option>
+                <option value="basicos">Básicos</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="gaming">Gaming</option>
+                <option value="urbanas">Urbanas</option>
+                <option value="iluminacion">Iluminación</option>
+                <option value="escritorio">Escritorio</option>
+                <option value="wearables">Wearables</option>
+                <option value="deporte">Deporte</option>
+                <option value="audio">Audio</option>
+                <option value="portatiles">Portátiles</option>
+                <option value="hogar">Hogar</option>
+                <option value="outdoor">Outdoor</option>
+            </select>
+        </div>
     </div>
 
     <div class="productsContainer" id="productsContainer">
-        
+
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>

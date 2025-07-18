@@ -1,5 +1,10 @@
+const token = localStorage.getItem('token')
 
-const API_URL = 'http://localhost:3000/api/products'
+if(!token){
+    window.location.href = './pages/auth.html'
+}
+
+const API_URL = 'https://rest-api-node-azure.vercel.app/api/products'
 const contenedorProductos = document.getElementById('productsContainer')
 
 const renderizarProductos = (productos) => {

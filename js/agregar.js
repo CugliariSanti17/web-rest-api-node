@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/products'
+const API_URL = 'https://rest-api-node-azure.vercel.app/api/products'
 
 const form = document.getElementById('formPublicar');
 const nombre = document.getElementById('nombreProducto');

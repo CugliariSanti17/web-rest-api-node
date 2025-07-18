@@ -20,15 +20,25 @@ formAuth.addEventListener('submit', async (e) =>{
 
         const data = await res.json();
 
-        if(res.ok){
-            localStorage.setItem('token', data.token)
-            mensajeAuth.textContent = '¡Login exitoso!';
-
-            window.location.href = '../index.html';
-        }else{
-            mensajeAuth.textContent = data.message || 'Error en el login';
+        if(!res.ok){
+           if (data.errores){
+            mensajeAuth.textContent = data.errores.map((error) => error.msg).join(' | ')
+           } else{
+            mensajeAuth.textContent = 'Error al iniciar sesión.'
+           }
+           mensajeAuth.style.color = 'red';
+           return;
         }
+
+        LocalStorage.setItem('token', data.token);
+
+        mensajeAuth.textContent = '¡Login exitoso!';
+        mensajeAuth.style.color = 'green';
+
+        window.location.href = '../index.html';
     } catch (error) {
-        mensajeAuth.textContent = `Error al conectar con el servidor: ${error}`
+        mensajeAuth.textContent = `Error al conectar con el servidor`
+        mensajeAuth.style.color = 'red';
+        console.error(error)
     }
 });

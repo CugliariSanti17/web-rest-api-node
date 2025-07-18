@@ -41,7 +41,10 @@ const renderizarProductos = (productos) => {
             }
 
             fetch(`${API_URL}/${id}`, {
-                method: "DELETE"
+                headers: {
+                    Authorization: `Bearer ${token}`
+                },   
+                method: "DELETE",
             })
             .then((res) => res.json())
             .then(() => {
@@ -77,7 +80,11 @@ const renderizarProductos = (productos) => {
 };
 
 
-fetch(API_URL)
+fetch(API_URL,{
+    headers: {
+        Authorization: `Bearer ${token}`
+    }
+})
     .then((res) => res.json())
     .then(data => {
         renderizarProductos(data)

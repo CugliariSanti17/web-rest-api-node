@@ -1,6 +1,7 @@
 const API_URL = 'https://rest-api-node-azure.vercel.app/api/products'
 const params = new URLSearchParams(window.location.search)
 const id = params.get('id')
+const token = localStorage.getItem('token')
 
 const form = document.getElementById('formEditar');
 const nombre = document.getElementById('nombre');
@@ -9,7 +10,11 @@ const descripcion = document.getElementById('descripcion')
 const stock = document.getElementById('stock')
 const mensaje = document.getElementById('mensaje')
 
-fetch(`${API_URL}/${id}`)
+fetch(`${API_URL}/${id}`,{
+    headers: {
+        Authorization: `Bearer ${token}`
+    }
+})
     .then(res => res.json())
     .then(data => {
         nombre.value = data.nombre;
@@ -35,7 +40,7 @@ form.addEventListener('submit', async (e) => {
     try {
         const res = await fetch(`${API_URL}/${id}`, {
             method: 'PUT',
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
             body: JSON.stringify(productoActualizado)
         });
 

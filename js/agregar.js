@@ -1,4 +1,5 @@
 const API_URL = 'https://rest-api-node-azure.vercel.app/api/products'
+const token = localStorage.getItem('token')
 
 const form = document.getElementById('formPublicar');
 const nombre = document.getElementById('nombreProducto');
@@ -21,7 +22,8 @@ form.addEventListener('submit', async (e) => {
     const res = await fetch(API_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify(nuevoProducto)
     });

@@ -79,6 +79,25 @@ const renderizarProductos = (productos) => {
     })
 };
 
+const filtroCategoria = document.getElementById('filtroCategoria');
+
+filtroCategoria.addEventListener('change', () =>{
+    const categoria = filtroCategoria.value;
+    const url = categoria ? `${API_URL}?category=${encodeURIComponent(categoria)}`: API_URL;
+
+    fetch(url, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+        .then(res => res.json())
+        .then(data => renderizarProductos(data))
+        .catch(error => {
+            contenedorProductos.innerHTML = "<p>Error al filtrar productos.</p>";
+            console.error("Error:", error);
+        });
+})
+
 
 fetch(API_URL,{
     headers: {

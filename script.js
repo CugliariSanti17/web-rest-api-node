@@ -85,7 +85,16 @@ fetch(API_URL,{
         Authorization: `Bearer ${token}`
     }
 })
-    .then((res) => res.json())
+    .then((res) => {
+        if(res.status === 401 || res.status === 403){
+            localStorage.removeItem('token');
+            alert('Tu sesión ha expirado. Por favor iniciá sesión nuevamente.');
+            window.location.href = './pages/auth.html';
+            return;
+        };
+        
+        res.json()
+    })
     .then(data => {
         renderizarProductos(data)
     })

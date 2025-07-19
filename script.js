@@ -93,7 +93,7 @@ fetch(API_URL,{
             return;
         };
         
-        res.json()
+        return res.json()
     })
     .then(data => {
         renderizarProductos(data)

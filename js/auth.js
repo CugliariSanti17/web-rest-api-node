@@ -30,7 +30,7 @@ formAuth.addEventListener('submit', async (e) =>{
            return;
         }
 
-        LocalStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.token);
 
         mensajeAuth.textContent = '¡Login exitoso!';
         mensajeAuth.style.color = 'green';

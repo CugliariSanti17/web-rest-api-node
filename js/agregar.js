@@ -5,7 +5,9 @@ const form = document.getElementById('formPublicar');
 const nombre = document.getElementById('nombreProducto');
 const precio = document.getElementById('precioProducto');
 const descripcion = document.getElementById('descripcionProducto');
-const stock = document.getElementById('stockProducto')
+const stock = document.getElementById('stockProducto');
+const categoria1 = document.getElementById('categoria1')
+const categoria2 = document.getElementById('categoria2')
 const mensaje = document.getElementById('mensajeCrearProducto');
 
 form.addEventListener('submit', async (e) => {
@@ -15,7 +17,8 @@ form.addEventListener('submit', async (e) => {
         nombre: nombre.value.trim(),
         precio: parseFloat(precio.value),
         descripcion: descripcion.value.trim(),
-        stock: parseInt(stock.value)
+        stock: parseInt(stock.value),
+        categoria: [categoria1, categoria2]
     }
 
     try {

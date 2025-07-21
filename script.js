@@ -105,8 +105,9 @@ formBuscar.addEventListener('submit', (e) =>{
     e.preventDefault();
 
     const nombreProducto = buscador.value.trim();
+    const url = nombreProducto ? `${API_URL}/search?name=${encodeURIComponent(nombreProducto)}`: API_URL;
 
-    fetch(`${API_URL}/search?name=${encodeURIComponent(nombreProducto)}`, {
+    fetch(url, {
         headers: {
             Authorization: `Bearer ${token}`
         }

@@ -98,6 +98,26 @@ filtroCategoria.addEventListener('change', () =>{
         });
 })
 
+const formBuscar = document.getElementById('searchProductForm');
+const buscador = document.getElementById('buscador')
+
+formBuscar.addEventListener('submit', (e) =>{
+    e.preventDefault();
+
+    const nombreProducto = buscador.value.trim();
+
+    fetch(`${API_URL}/search?name=${encodeURIComponent(nombreProducto)}`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => renderizarProductos(data))
+    .catch(error => {
+        contenedorProductos.innerHTML = "<p>Error al buscar productos.</p>";
+        console.error("Error:", error);
+    });
+});
 
 fetch(API_URL,{
     headers: {

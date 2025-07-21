@@ -18,7 +18,7 @@ form.addEventListener('submit', async (e) => {
         precio: parseFloat(precio.value),
         descripcion: descripcion.value.trim(),
         stock: parseInt(stock.value),
-        categoria: [categoria1, categoria2]
+        categoria: [categoria1.value, categoria2.value]
     }
 
     try {

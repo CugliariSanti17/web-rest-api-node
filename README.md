@@ -14,11 +14,11 @@
 
 ### Inicio de sesión
 
-- **Descripción:** Inicio de sesion para verificar que el usuarios esté autorizado para realizar todas las funcionalidades. El mismo tiene un vencimiento de 1 hora. Pasado el tiempo, se volverá a pedir el registro del usuario nuevamente.
+- **Descripción:** Inicio de sesión para verificar que el usuario esté autorizado para realizar todas las funcionalidades. El mismo tiene un vencimiento de 1 hora. Pasado el tiempo, se volverá a pedir el registro del usuario nuevamente.
 
 - **Campos a completar:**
-    - `Email = user@gmail.com`
-    - `Contraseña = talentotech`
+    - `Email`
+    - `Contraseña`
 
 ---
 
@@ -34,20 +34,20 @@
     - `Nombre del producto`
 
 > ⚠️ **Importante:** ⚠️
->Aquellos productos que llevan tilde en su nombre deberán ser buscados tal cual como están escritos. De lo contrario la busqueda no será efectiva. 
+> Aquellos productos que lleven tilde en su nombre deberán ser buscados tal cual como están escritos. De lo contrario la busqueda no será efectiva. 
 
 ---
 
 ### Filtrar productos por categoria
 
-- **Descripción:** En la parte superior derecha podrás encontrar un selector de opciones. Cada opcion equivale a una categoria diferente donde se mostrarán los productos que pertenecen a la misma.
+- **Descripción:** En la parte superior derecha podrás encontrar un selector de opciones. Cada opción equivale a una categoria diferente donde se mostrarán los productos que pertenecen a la misma.
 
 
 ---
 
 ### Ver más detalles del producto
 
-- **Descripción:** Cada producto contiene un boton que dice "Ver más detalles". El mismo permite ver informacion del producto que no se ve a simple vista (Id, categoria y stock).
+- **Descripción:** Cada producto contiene un boton "Ver más detalles". El mismo permite ver información del producto que no se ve a simple vista (ID, categoría y stock).
 
 ---
 
@@ -64,7 +64,7 @@
     - `Categoría 2`
 
 > ⚠️ **Importante:** ⚠️
-> Intenta NO dejar algun campo del formulario vacío. Si esto sucede, la propiedad del campo vacío será borrada.
+> Intentá NO dejar ningun campo del formulario vacío. Si esto sucede, la propiedad del campo vacío será borrada.
 
 ---
 
@@ -121,4 +121,12 @@ web/
 ``` 
 
 ---
+
+## Tecnologías usadas
+
+- HTML
+- CSS
+- Javascript
+- Sweet Alert 2
+- Vercel (deploy)
 

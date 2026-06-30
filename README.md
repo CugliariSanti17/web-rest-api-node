@@ -15,7 +15,7 @@
 ### Inicio de sesión
 
 - **Usuario:** user@gmail.com
--**Contraseña** talentotech
+- **Contraseña** talentotech
 
 - **Descripción:** Inicio de sesión para verificar que el usuario esté autorizado para realizar todas las funcionalidades. El mismo tiene un vencimiento de 1 hora. Pasado el tiempo, se volverá a pedir el registro del usuario nuevamente.
 
